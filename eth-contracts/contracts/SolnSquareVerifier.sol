@@ -13,7 +13,7 @@ contract SolnSquareVerifier is DimejiERC721Token, Verifier{
         uint index;
         address senderAddress;
     }
-        uint256 solutionCounter = 1;
+        uint256 solutionCounter = 0;
 // TODO define an array of the above struct
     Solution[] public solutions;
 
@@ -48,7 +48,7 @@ contract SolnSquareVerifier is DimejiERC721Token, Verifier{
         require(Solutionssubmitted[key].senderAddress == address(0), 'The solution already submitted');
         require(verifyTx(a, b, c, input), 'The solution is not valid');
         add(a, b, c, input);
-        mint(msg.sender, tokenId);
+        super.mint(msg.sender, tokenId);
     }
 }
   
