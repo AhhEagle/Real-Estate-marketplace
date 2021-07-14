@@ -32,7 +32,7 @@ contract Ownable {
     function transferOwnership(address newOwner) public onlyOwner {
         // TODO add functionality to transfer control of the contract to a newOwner.
         // make sure the new owner is a real address
-        require(!newOwner.isContract(), "The given address is a contract address and it should be an account address.");
+        require(newOwner != address(0), "The given address is a contract address and it should be an account address.");
         _owner = newOwner;
         emit changeOwner(_owner);
     }
@@ -248,7 +248,7 @@ contract ERC721 is Pausable, ERC165 {
 
         // TODO revert if given tokenId already exists or given address is invalid
         require(!_exists(tokenId), 'This token already exists');
-        require(!to.isContract(), 'address is not valid');
+        require(to != address(0), 'address is not valid');
         // TODO mint tokenId to given address & increase token count of owner
         _tokenOwner[tokenId] = to;
         _ownedTokensCount[to].increment();
@@ -264,7 +264,7 @@ contract ERC721 is Pausable, ERC165 {
          require(ownerOf(tokenId) == from, "not the owner of the token");
 
         // TODO: require token is being transfered to valid address
-        require(!to.isContract(), "not a valid address");
+        require(to != address(0), "not a valid address");
         // TODO: clear approval
         _tokenApprovals[tokenId] = address(0);
         // TODO: update token counts & transfer ownership of the token ID 
@@ -519,11 +519,6 @@ contract ERC721Metadata is ERC721Enumerable, usingOraclize {
         return _tokenURIs[tokenId];
     }
 
-    function tokenURI(uint256 tokenId) external view returns (string memory) {
-        require(_exists(tokenId));
-        return _tokenURIs[tokenId];
-    }
-
 
     // TODO: Create an internal function to set the tokenURI of a specified tokenId
     // It should be the _baseTokenURI + the tokenId in string form
@@ -538,7 +533,7 @@ contract ERC721Metadata is ERC721Enumerable, usingOraclize {
 
 }
 
-}
+
 
 //  TODO's: Create CustomERC721Token contract that inherits from the ERC721Metadata contract. You can name this contract as you please
 //  1) Pass in appropriate values for the inherited ERC721Metadata contract

@@ -1,4 +1,4 @@
-var ERC721MintableComplete = artifacts.require('ERC721Mintable');
+var ERC721MintableComplete = artifacts.require('ERC721MintableComplete');
 
 contract('TestERC721Mintable', accounts => {
 
@@ -31,12 +31,21 @@ contract('TestERC721Mintable', accounts => {
 
         // token uri should be complete i.e: https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/1
         it('should return token uri', async function () { 
-            
+            let tokenUriOne = await contract.tokenURI.call(1);
+            assert.equal("https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/1", tokenUriOne, "Invalid token URI");
         })
 
         it('should transfer token from one owner to another', async function () { 
-            
-        })
+            try 
+            {
+                await contract.transferFrom(account_one, account_two, 2, { from: account_one });
+            }
+            catch(e) {
+                console.log('TransferFrom failed.', e);
+            }
+            let ownerOfOne = await contract.ownerOf.call(1);
+            assert.equal(account_one, ownerOfOne, "Not the owner of token.");
+            })
     });
 
     describe('have ownership properties', function () {
@@ -45,11 +54,18 @@ contract('TestERC721Mintable', accounts => {
         })
 
         it('should fail when minting when address is not contract owner', async function () { 
-            
+            let denied = false;
+            try  {
+                await contract.mint(account_one, 4, { from: account_two });
+            } catch(e) {
+                denied = true;
+            }
+            assert.equal(true, denied, "Unable to mint");
         })
 
         it('should return contract owner', async function () { 
-            
+            let owner = await contract.getOwner.call();
+            assert.equal(account_one, owner, "You are not the owner of this token");
         })
 
     });
