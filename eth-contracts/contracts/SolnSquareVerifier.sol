@@ -5,8 +5,7 @@ import './../../zokrates/code/square/verifier.sol';
 import './ERC721Mintable.sol';
 
 // TODO define another contract named SolnSquareVerifier that inherits from your ERC721Mintable class
-
-
+contract SolnSquareVerifier {
 
 // TODO define a solutions struct that can hold an index & an address
 
@@ -30,6 +29,7 @@ import './ERC721Mintable.sol';
 //  - make sure the solution is unique (has not been used before)
 //  - make sure you handle metadata as well as tokenSuplly
 
+}
   
 
 

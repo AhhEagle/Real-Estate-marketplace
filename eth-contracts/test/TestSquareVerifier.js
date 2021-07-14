@@ -4,8 +4,10 @@ const VerifierContract = artifacts.require('Verifier');
 const proof = require('./proof.json');
 
 contract('TestVerifier',  async(accounts)=>{
-    before(async function () { 
-        this.verifier = await VerifierContract.new({from: accounts[0]});  
+    
+    describe('Test Verifier', function(){
+    beforeEach(async function () { 
+        this.contract = await VerifierContract.new({from: accounts[0]});  
     });
 
 
@@ -21,4 +23,5 @@ it('Test verification with incorrect proof', async function () {
     let result = await this.contract.verifyTx.call(proof.proof.a , proof.proof.b, proof.proof.c, ["0x0011", "0x1122"]);
     assert.equal(result, false, "Inputs not verified");
   });
+});
 });

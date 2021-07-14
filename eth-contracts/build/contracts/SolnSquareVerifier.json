@@ -1,0 +1,176 @@
+{
+  "contractName": "SolnSquareVerifier",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.5+commit.47a71e8f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/mac/Desktop/Real-Estate-marketplace/eth-contracts/contracts/SolnSquareVerifier.sol\":\"SolnSquareVerifier\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/mac/Desktop/Real-Estate-marketplace/eth-contracts/contracts/ERC721Mintable.sol\":{\"keccak256\":\"0x440c564f44e744534761bd18e2495722d495d64c773f97dff28e6cabadd41f65\",\"urls\":[\"bzzr://4656f899db3b0450edb4fd49c8f63708dbbee13cbffabc0044a86696780c438a\"]},\"/Users/mac/Desktop/Real-Estate-marketplace/eth-contracts/contracts/Oraclize.sol\":{\"keccak256\":\"0xa7096ec98db4672e3df6bea596de1ab0b69eb293ce3ff75d117c9762faaebb8c\",\"urls\":[\"bzzr://98a563c6fa5d85ef51818652e67ca022f7538c3f945044be7f43dbe3afcbb493\"]},\"/Users/mac/Desktop/Real-Estate-marketplace/eth-contracts/contracts/SolnSquareVerifier.sol\":{\"keccak256\":\"0xc36efc0a8d48cc8542c706b08ae83cb180d62377e69d6e32dd863d6b2ad984ff\",\"urls\":[\"bzzr://51c3ac5bebb6e4516854418a399d632ebe134ca739c79284856bbc23ddcd6a5f\"]},\"/Users/mac/Desktop/Real-Estate-marketplace/zokrates/code/square/verifier.sol\":{\"keccak256\":\"0xe2408d0dfab1e7947c1f9c83614360200547a3882e6bb1f1ca54bdbe5c5d3594\",\"urls\":[\"bzzr://fd223b3fb3ed6e431d8d331d471dae37b0a2e653bf2cbaf6eda42c9bf18c192e\"]},\"openzeppelin-solidity/contracts/drafts/Counters.sol\":{\"keccak256\":\"0x5be8533c5950173dc2b77b75108fae6e6c5449aedadde3385ba457394aad2384\",\"urls\":[\"bzzr://8ab3b1e3d023aafb8a2d127de323b74567084e821b955b5f543e67fe964b1a6b\"]},\"openzeppelin-solidity/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x640b6dee7a4b830bdfd52b5031a07fc2b12209f5b2e29e5d364a7d37f69d8076\",\"urls\":[\"bzzr://292843005e754e752644f767477ec5ad7a1ffc91ddb18c38b8079c62f3993cad\"]},\"openzeppelin-solidity/contracts/token/ERC721/IERC721Receiver.sol\":{\"keccak256\":\"0x042048c375daca04b31e31c91bbae912b84b5eb818c4e31b2deb530fd2305342\",\"urls\":[\"bzzr://2f8b9c142d30b43eab7b77dbcc632a51987eeb62371777d765e9311c0b3c4c13\"]},\"openzeppelin-solidity/contracts/utils/Address.sol\":{\"keccak256\":\"0x1a8e5072509c5ea7365eb1d48030b9be865140c8fb779968da0a459a0e174a11\",\"urls\":[\"bzzr://4e1d23731da27602b8c552e54fb9976dadf8cf46a8f90a3c8c1b85fe044618b9\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3fe6080604052600080fdfea165627a7a72305820799f10621649dfbc43273e81d12ff4543248d11a667526dd2224d6260d98ccd40029",
+  "deployedBytecode": "0x6080604052600080fdfea165627a7a72305820799f10621649dfbc43273e81d12ff4543248d11a667526dd2224d6260d98ccd40029",
+  "sourceMap": "318:566:3:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;318:566:3;;;;;;;",
+  "deployedSourceMap": "318:566:3:-;;;;;",
+  "source": "pragma solidity ^0.5.5;\n\n// TODO define a contract call to the zokrates generated solidity contract <Verifier> or <renamedVerifier>\nimport './../../zokrates/code/square/verifier.sol';\nimport './ERC721Mintable.sol';\n\n// TODO define another contract named SolnSquareVerifier that inherits from your ERC721Mintable class\ncontract SolnSquareVerifier {\n\n// TODO define a solutions struct that can hold an index & an address\n\n\n// TODO define an array of the above struct\n\n\n// TODO define a mapping to store unique solutions submitted\n\n\n\n// TODO Create an event to emit when a solution is added\n\n\n\n// TODO Create a function to add the solutions to the array and emit the event\n\n\n\n// TODO Create a function to mint new NFT only after the solution has been verified\n//  - make sure the solution is unique (has not been used before)\n//  - make sure you handle metadata as well as tokenSuplly\n\n}\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+  "sourcePath": "/Users/mac/Desktop/Real-Estate-marketplace/eth-contracts/contracts/SolnSquareVerifier.sol",
+  "ast": {
+    "absolutePath": "/Users/mac/Desktop/Real-Estate-marketplace/eth-contracts/contracts/SolnSquareVerifier.sol",
+    "exportedSymbols": {
+      "SolnSquareVerifier": [
+        7439
+      ]
+    },
+    "id": 7440,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7436,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".5"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:3"
+      },
+      {
+        "absolutePath": "/Users/mac/Desktop/Real-Estate-marketplace/zokrates/code/square/verifier.sol",
+        "file": "./../../zokrates/code/square/verifier.sol",
+        "id": 7437,
+        "nodeType": "ImportDirective",
+        "scope": 7440,
+        "sourceUnit": 9990,
+        "src": "132:51:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/mac/Desktop/Real-Estate-marketplace/eth-contracts/contracts/ERC721Mintable.sol",
+        "file": "./ERC721Mintable.sol",
+        "id": 7438,
+        "nodeType": "ImportDirective",
+        "scope": 7440,
+        "sourceUnit": 1110,
+        "src": "184:30:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 7439,
+        "linearizedBaseContracts": [
+          7439
+        ],
+        "name": "SolnSquareVerifier",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 7440,
+        "src": "318:566:3"
+      }
+    ],
+    "src": "0:914:3"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/Users/mac/Desktop/Real-Estate-marketplace/eth-contracts/contracts/SolnSquareVerifier.sol",
+      "exportedSymbols": {
+        "SolnSquareVerifier": [
+          7439
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".5"
+          ]
+        },
+        "id": 7436,
+        "name": "PragmaDirective",
+        "src": "0:23:3"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 9990,
+          "absolutePath": "/Users/mac/Desktop/Real-Estate-marketplace/zokrates/code/square/verifier.sol",
+          "file": "./../../zokrates/code/square/verifier.sol",
+          "scope": 7440,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 7437,
+        "name": "ImportDirective",
+        "src": "132:51:3"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 1110,
+          "absolutePath": "/Users/mac/Desktop/Real-Estate-marketplace/eth-contracts/contracts/ERC721Mintable.sol",
+          "file": "./ERC721Mintable.sol",
+          "scope": 7440,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 7438,
+        "name": "ImportDirective",
+        "src": "184:30:3"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            7439
+          ],
+          "name": "SolnSquareVerifier",
+          "nodes": [
+            null
+          ],
+          "scope": 7440
+        },
+        "id": 7439,
+        "name": "ContractDefinition",
+        "src": "318:566:3"
+      }
+    ],
+    "id": 7440,
+    "name": "SourceUnit",
+    "src": "0:914:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.5+commit.47a71e8f.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x3AeF4355EF02E5990B5901A4127fC41AFC4c7E63",
+      "transactionHash": "0x806a4987793ab7534995b6791c7070afa994d76506222d66c0b4703199d83283"
+    }
+  },
+  "schemaVersion": "3.4.1",
+  "updatedAt": "2021-07-14T20:29:31.740Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

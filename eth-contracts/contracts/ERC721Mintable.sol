@@ -17,7 +17,7 @@ contract Ownable {
     //  2) create an internal constructor that sets the _owner var to the creater of the contract
     constructor () internal {
         _owner = msg.sender;
-         emit changeOwner(msg.sender);
+        // emit changeOwner(msg.sender);
     } 
     //  3) create an 'onlyOwner' modifier that throws if called by any account other than the owner.
      modifier onlyOwner() {
@@ -45,28 +45,24 @@ contract Ownable {
 //  4) create 'whenNotPaused' & 'paused' modifier that throws in the appropriate situation
 //  5) create a Paused & Unpaused event that emits the address that triggered the event
 contract Pausable is Ownable {
-    bool private _paused = false;
+    bool private _paused;
+
+    function setPaused (bool setpaused) public onlyOwner {
+        _paused = setpaused;
+    }
 
     constructor () internal {
         _paused = false;
-        emit Unpaused(msg.sender);
+      //  emit Unpaused(msg.sender);
     }
 
     function isPaused() public view returns(bool) {
         return _paused;
     }
 
-    function setPaused (bool paused) public onlyOwner {
-        _paused = paused;
-        if (_paused){
-            emit Paused(msg.sender);
-        } else {
-            emit Unpaused(msg.sender);
-        }
-    }
-
+    
     modifier whenNotPaused() {
-        require(_paused == true, "Contract is paused.");
+        require(!_paused, "Contract is paused.");
         _;
     }
 
@@ -268,8 +264,8 @@ contract ERC721 is Pausable, ERC165 {
         // TODO: clear approval
         _tokenApprovals[tokenId] = address(0);
         // TODO: update token counts & transfer ownership of the token ID 
-         _ownedTokensCount[from].decrement();
-        _ownedTokensCount[to].increment();
+         Counters.decrement(_ownedTokensCount[from]);
+        Counters.increment(_ownedTokensCount[to]);
         _tokenOwner[tokenId] = to;
         // TODO: emit correct event
         emit Transfer(from, to, tokenId);
@@ -546,7 +542,7 @@ contract DimejiERC721Token is ERC721Metadata("Dimtoken", "DT", "https://s3-us-we
 //      -returns a true boolean upon completion of the function
 //      -calls the superclass mint and setTokenURI functions
 function mint(address to, uint256 tokenId) public onlyOwner returns (bool){
-        _mint(to, tokenId);
+       super. _mint(to, tokenId);
         setTokenURI(tokenId);
         return true;
     }
