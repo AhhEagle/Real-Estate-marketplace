@@ -8,6 +8,10 @@ The capstone will build upon the knowledge you have gained in the course in orde
 -  to run the test: 
     - Navigate to eth-contracts
     - run `truffle test`
+    You should see all test passing
+    
+    <img width="574" alt="Screenshot 2021-07-18 at 22 28 43" src="https://user-images.githubusercontent.com/24871973/126082688-02393668-abff-4451-afb5-36eda9a9d553.png">
+
 - to deploy on the rinkeby network, run:
         `truffle migrate --network rinkeby --reset`
 ## Deployment 
