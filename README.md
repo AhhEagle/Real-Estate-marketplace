@@ -25,7 +25,7 @@ Migration: Contract address: "0x64916eeC5cCD26d460F4D1439c011BDa5A44a162"
 Token were minted and listed on the Opensea Marketplace. It can be viwed on :
 https://testnets.opensea.io/collection/dimtoken
     
-    <img width="1390" alt="Screenshot 2021-07-18 at 22 22 10" src="https://user-images.githubusercontent.com/24871973/126082561-d0347431-a823-4597-8604-4361533a7b0f.png">
+<img width="1390" alt="Screenshot 2021-07-18 at 22 22 10" src="https://user-images.githubusercontent.com/24871973/126082585-7734cc26-4e39-4ea6-a0ac-1744f31d02cd.png">
 
 
 ## SolnSquareVerifier ABI
