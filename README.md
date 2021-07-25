@@ -8,14 +8,21 @@ The capstone will build upon the knowledge you have gained in the course in orde
 -  to run the test: 
     - Navigate to eth-contracts
     - run `truffle test`
+    You should see all test passing
+    
+    <img width="574" alt="Screenshot 2021-07-18 at 22 28 43" src="https://user-images.githubusercontent.com/24871973/126082688-02393668-abff-4451-afb5-36eda9a9d553.png">
+
 - to deploy on the rinkeby network, run:
         `truffle migrate --network rinkeby --reset`
 ## Deployment 
 The contract as been deployed to the following address:
 SolnSquareVerifier:  Contract address: "0xB477B58f4c6C8E1Cf80862B6d130C7a9369eD0eC"
                     Transaction hash: "0x1c2dcb99cb52fff818e34da4acb8b0e0434b6121ab3b468dc4c18fe1421a23fb"
+
+
 Verifier: Contract address: "0x0F31EAB8a5F389550B387B8785cfaf667cB389F3"
           Transaction hash: "0x05fdad33d6d51bf3e94d93e12c0ca6ba8419ccd5d82395dafcba03af540070f6"
+
 
 Migration: Contract address: "0x64916eeC5cCD26d460F4D1439c011BDa5A44a162"
            Transaction hash:
@@ -24,6 +31,9 @@ Migration: Contract address: "0x64916eeC5cCD26d460F4D1439c011BDa5A44a162"
 ## OpeanSea Marketplace
 Token were minted and listed on the Opensea Marketplace. It can be viwed on :
 https://testnets.opensea.io/collection/dimtoken
+    
+<img width="1390" alt="Screenshot 2021-07-18 at 22 22 10" src="https://user-images.githubusercontent.com/24871973/126082585-7734cc26-4e39-4ea6-a0ac-1744f31d02cd.png">
+
 
 ## SolnSquareVerifier ABI
 `{
