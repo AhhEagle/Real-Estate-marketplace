@@ -13,7 +13,6 @@ it("Test if a new solution can be added for contract", async function(){
     await this.solnSquareVerifier.add(proof.proof.a, proof.proof.b, proof.proof.c, proof.inputs, {from: accounts[0]});
 
     let result = await this.solnSquareVerifier.solutions(0);
-    console.log(result);
     assert.equal(0, result.index, "solution should have index 0.");
     assert.equal(accounts[0], result.senderAddress, "solution should be added by msg.sender.");
 })
