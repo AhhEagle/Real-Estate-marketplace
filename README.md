@@ -15,7 +15,7 @@ The capstone will build upon the knowledge you have gained in the course in orde
 - to deploy on the rinkeby network, run:
         `truffle migrate --network rinkeby --reset`
 ## Deployment 
-The contract as been deployed to the following address:
+The contract has been deployed to the following address:
 SolnSquareVerifier:  Contract address: "0xB477B58f4c6C8E1Cf80862B6d130C7a9369eD0eC"
                     Transaction hash: "0x1c2dcb99cb52fff818e34da4acb8b0e0434b6121ab3b468dc4c18fe1421a23fb"
 
@@ -736,7 +736,6 @@ https://testnets.opensea.io/collection/dimtoken
 # Project Resources
 
 * [Remix - Solidity IDE](https://remix.ethereum.org/)
-* [Visual Studio Code](https://code.visualstudio.com/)
 * [Truffle Framework](https://truffleframework.com/)
 * [Ganache - One Click Blockchain](https://truffleframework.com/ganache)
 * [Open Zeppelin ](https://openzeppelin.org/)
